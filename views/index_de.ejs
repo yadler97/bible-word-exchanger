@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Bible Word Exchanger</title>
+        <script src="./myscripts.js"></script>
+    </head>
+    <body>
+        <%  for (let book of books){ %>
+            <a href="/de?book=<%= book %>"><%= book %></a>
+        <% } %>
+        <br><br>
+        <input placeholder="Altes Wort" id="old_word">
+        <input placeholder="Neues Wort" id="new_word" onkeyup="click_button(event)">
+        <button id="enter_button" onclick="replaceText()">Text ändern</button>
+        <br>
+        <p id="bible_text"><%- bibleText.replace(/\n/g, '<br>') %></p>
+        <a href="/?book=<%= book %>">English version</a>
+    </body>
+</html>
