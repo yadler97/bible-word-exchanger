@@ -18,7 +18,7 @@
         <% } %>
         <br><br>
         <input placeholder="Old Word" id="old_word">
-        <input placeholder="New Word" id="new_word" onkeyup="click_button(event)">
+        <input placeholder="New Word" id="new_word" onkeyup="clickButton(event)">
         <button id="enter_button" onclick="replaceText()">Change Text</button>
         <br>
         <p id="bible_text"><%- bibleText.replace(/\n/g, '<br>') %></p>
