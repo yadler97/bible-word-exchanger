@@ -1,4 +1,4 @@
-<html>
+<html lang="de">
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174698289-1"></script>
@@ -17,8 +17,8 @@
             <a href="/de?book=<%= book %>"><%= book %></a>
         <% } %>
         <br><br>
-        <input placeholder="Altes Wort" id="old_word">
-        <input placeholder="Neues Wort" id="new_word" onkeyup="clickButton(event)">
+        <input placeholder="Altes Wort" id="old_word" aria-label="Altes Wort">
+        <input placeholder="Neues Wort" id="new_word" aria-label="Neues Wort" onkeyup="clickButton(event)">
         <button id="enter_button" onclick="replaceText()">Text ändern</button>
         <br>
         <p id="bible_text"><%- bibleText.replace(/\n/g, '<br>') %></p>
